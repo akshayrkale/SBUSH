@@ -1,0 +1,31 @@
+
+HOW TO RUN:
+This is a shell developed in c. The executable name is SBUSH and is located at rootfs/hello
+To run commands separately on command line type:
+
+rootfs/hello> ./hello after which the prompt appears.
+
+Sample Command Line:
+
+1)SBUSH> command1 [ | command2 | command3...]
+
+2)Built in commands supported: cd, set PATH, set PS1*, exit
+
+3) Setting PATH and PS1 environment variables. (The builtins expect a single argument to these commands which must be without spaces)
+
+	SBUSH> set PATH=$PATH:/append/path
+	SBUSH> set PATH=/prepend/path:$PATH:
+	SBUSH> set PS1=newps1
+	SBUSH> cd <directotyName>
+
+4)The shell suports executing script files which are of the form name.sbush. To execute script files do:
+	
+	SBUSH> rootfs/hello/hello /path/to/script.sbush
+
+5)To exit shell
+	SBUSH> exit
+
+*No wild card or shell special variables like \u \w currently not supported.
+
+
+
